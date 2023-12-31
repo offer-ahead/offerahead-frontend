@@ -1,0 +1,13 @@
+.job-list-header {
+    display: flex;
+    padding: 10px 16px;
+    background-color: #e8e8e8; /* 根据设计选择合适的颜色 */
+    font-weight: bold;
+}
+
+.header-item {
+    flex: 1;
+    /* 根据实际内容调整，比如可以给 'Applied?' 更少的空间 */
+}
+
+/* 确保其他样式不会影响到表头的样式 */

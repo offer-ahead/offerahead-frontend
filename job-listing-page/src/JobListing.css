@@ -1,0 +1,37 @@
+.job-listing {
+    display: grid;
+    grid-template-columns: 50px 3fr repeat(3, 1fr) min-content; /* 根据内容调整各列的宽度 */
+    align-items: center;
+    gap: 16px; /* 列与列之间的间距 */
+    padding: 10px; /* 内边距 */
+    border-bottom: 1px solid #e1e4e8; /* 底部边界线 */
+    background-color: #fff; /* 背景色 */
+}
+
+.job-company-logo img {
+    width: 40px; /* logo大小 */
+    margin-right: 16px; /* logo右侧边距 */
+}
+
+.job-details {
+    display: flex;
+    flex-direction: column;
+    gap: 4px; /* 标题和子标题之间的间距 */
+}
+
+.job-title {
+    font-weight: bold; /* 标题字体加粗 */
+}
+
+/* ... 其他样式 ... */
+
+@media (max-width: 768px) {
+    .job-listing {
+        grid-template-columns: 50px 1fr; /* 在较小屏幕上调整列宽 */
+        /* 隐藏或合并某些列以适应小屏幕 */
+    }
+
+    .job-sponsor, .job-posted, .job-applied {
+        display: none; /* 在小屏幕上隐藏这些元素 */
+    }
+}

@@ -1,0 +1,45 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff; /* 或者其他适合的颜色 */
+    padding: 10px 20px; /* 根据实际设计调整 */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* 添加一些阴影 */
+}
+
+.logo {
+    font-size: 24px; /* 根据实际设计调整 */
+    font-weight: bold;
+}
+
+.navigation a {
+    margin-right: 20px; /* 根据实际设计调整 */
+    text-decoration: none;
+    color: #333; /* 根据实际设计调整 */
+    /* 添加悬停效果 */
+}
+
+.navigation a:hover {
+    text-decoration: underline;
+}
+
+.user-actions button {
+    padding: 5px 15px; /* 根据实际设计调整 */
+    margin-left: 20px; /* 根据实际设计调整 */
+    /* 根据需要添加其他样式，如边框、背景等 */
+}
+
+.login-button {
+    background-color: #007bff; /* Blue background */
+    color: white; /* White text */
+    border: none;
+    border-radius: 20px; /* Rounded corners */
+    padding: 10px 20px; /* Padding on top/bottom and left/right */
+    font-weight: bold; /* Make the text bold */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.login-button:hover {
+    background-color: #0056b3; /* Slightly darker blue on hover */
+}
