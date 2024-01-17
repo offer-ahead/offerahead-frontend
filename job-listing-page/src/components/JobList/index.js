@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import JobListing from './JobListing';
-import '../JobList.css'; // 确保有 JobList.css 文件
-import config from '../config';
+import '../../JobList.css'; // 确保有 Index.css 文件
+import Item from "../Item";
 
 
 const JobList = () => {
@@ -12,7 +11,7 @@ const JobList = () => {
         // 定义请求后端接口的函数
         const fetchJobs = async () => {
             try {
-                const response = await fetch(`${config.API_URL}/joblist`);
+                const response = await fetch(`/joblist`);
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`);
                 }
@@ -45,7 +44,7 @@ const JobList = () => {
             </div>
             <div className="job-list">
                 {jobs.map(job => (
-                    <JobListing key={job.id} job={job} />
+                    <Item key={job.id} job={job} />
                 ))}
             </div>
         </div>
