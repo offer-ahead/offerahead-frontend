@@ -1,0 +1,10 @@
+.tittle {
+    display: block;
+    margin: 50px;
+    font-size: 30px;
+}
+
+.title__item {
+    font-size: 20px;
+    color: gray;
+}

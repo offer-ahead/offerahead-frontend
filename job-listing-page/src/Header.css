@@ -3,17 +3,32 @@
     justify-content: space-between;
     align-items: center;
     background-color: #fff; /* 或者其他适合的颜色 */
-    padding: 10px 20px; /* 根据实际设计调整 */
+    padding: 20px 20px; /* 根据实际设计调整 */
     box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* 添加一些阴影 */
 }
+
+.header__item {
+    display: flex; /* 应用Flexbox布局 */
+    align-items: center; /* 垂直居中对齐子元素 */
+    justify-content: flex-start; /* 子元素靠左对齐 */
+}
+
+.header__logo {
+    width: 40%; /* 设置图片宽度为容器宽度的50% */
+    height: 30%; /* 高度自动调整以保持图片的宽高比 */
+}
+
 
 .logo {
     font-size: 24px; /* 根据实际设计调整 */
     font-weight: bold;
+    color: black;
 }
 
 .navigation a {
-    margin-right: 20px; /* 根据实际设计调整 */
+    width: 16rem;
+    height: 20px;
+    margin-right: 2rem; /* 根据实际设计调整 */
     text-decoration: none;
     color: #333; /* 根据实际设计调整 */
     /* 添加悬停效果 */

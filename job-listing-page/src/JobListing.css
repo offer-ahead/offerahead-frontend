@@ -8,6 +8,12 @@
     background-color: #fff; /* 背景色 */
 }
 
+.strike-through {
+    text-decoration: line-through;
+    color: #a9a9a9;
+}
+
+
 .job-company-logo img {
     width: 40px; /* logo大小 */
     margin-right: 16px; /* logo右侧边距 */
@@ -21,6 +27,14 @@
 
 .job-title {
     font-weight: bold; /* 标题字体加粗 */
+}
+
+.apply {
+    box-shadow: none;
+    border-color: white;
+    color: white;
+    border-radius: 1rem;
+    background-color: #007bff;
 }
 
 /* ... 其他样式 ... */
