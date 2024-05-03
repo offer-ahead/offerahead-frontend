@@ -4,12 +4,20 @@ import '../Header.css'; // 确保有 Header.css 文件
 const Header = () => {
     return (
         <header className="header">
+            <div className="header__item">
+            <img
+                src={`${process.env.PUBLIC_URL}/job.jpg`}
+                className="header__logo"
+                alt="job"
+            />
             <div className="logo">JobPulse</div>
+            </div>
             <nav className="navigation">
                 {/* 这里放置导航链接 */}
-                <a href="/newgrad">Software NewGrad</a>
-                <a href="/intern">Software Intern</a>
-                <a href="/fulltime">Product Full-Time</a>
+                <a href="/newgrad">🧑‍💻Software NewGrad</a>
+                <a href="/intern">👩🏼‍💻Software Intern</a>
+                <a href="/fulltime">🙋🏼Product Full-Time</a>
+                <a href="/product_intern">🙋🏻‍Product Intern</a>
                 {/* ...其他链接 */}
             </nav>
             <div className="user-actions">
