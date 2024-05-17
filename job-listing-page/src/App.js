@@ -3,7 +3,7 @@ import Header from './components/Header';
 import FilterBar from './components/FilterBar';
 import JobList from './components/JobList';
 import Subtitle from "./components/Subtitle";
-import Tittle from "./components/Tittle";
+import Tittle from "./components/Title";
 import LogoItem from "./components/LogoItem";
 import './App.css'; // 确保你有一个App.css文件来样式化你的App
 

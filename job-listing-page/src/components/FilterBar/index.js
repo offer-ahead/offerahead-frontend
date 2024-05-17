@@ -1,5 +1,5 @@
 import React from 'react';
-import '../FilterBar.css'; // 确保有 FilterBar.css 文件
+import './FilterBar.css'; // 确保有 Index.css 文件
 
 const FilterBar = ({ onFilterChange }) => {
     return (

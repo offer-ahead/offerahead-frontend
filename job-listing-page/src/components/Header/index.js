@@ -1,5 +1,5 @@
 import React from 'react';
-import '../Header.css'; // 确保有 Header.css 文件
+import './Header.css'; // 确保有 Index.css 文件
 
 const Header = () => {
     return (
@@ -10,7 +10,7 @@ const Header = () => {
                 className="header__logo"
                 alt="job"
             />
-            <div className="logo">JobPulse</div>
+            <div className="logo">Offer Ahead</div>
             </div>
             <nav className="navigation">
                 {/* 这里放置导航链接 */}
@@ -18,6 +18,7 @@ const Header = () => {
                 <a href="/intern">👩🏼‍💻Software Intern</a>
                 <a href="/fulltime">🙋🏼Product Full-Time</a>
                 <a href="/product_intern">🙋🏻‍Product Intern</a>
+                <a href="/add_rules">🙋🏻‍Attention Rules</a>
                 {/* ...其他链接 */}
             </nav>
             <div className="user-actions">
