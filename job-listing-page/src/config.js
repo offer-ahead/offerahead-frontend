@@ -1,6 +1,6 @@
 // src/config.js
-const API_URL = 'http://localhost:9090';
+const API_MARKET_URL = 'http://localhost:8070';
 
 export default {
-    API_URL
+    API_MARKET_URL: API_MARKET_URL
 };

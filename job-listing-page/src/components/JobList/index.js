@@ -9,7 +9,7 @@ const JobList = () => {
 
     const fetchJobs = async (pageNum) => {
         try {
-            const response = await fetch(`${config.API_URL}/joblist?page=${pageNum}`);
+            const response = await fetch(`${config.API_MARKET_URL}/joblist?page=${pageNum}`);
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
