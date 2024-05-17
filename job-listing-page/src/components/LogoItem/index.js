@@ -1,5 +1,5 @@
 import React from 'react';
-import '../LogoItem.css';
+import './LogoItem.css';
 
 const LogoItem = () => {
     return (

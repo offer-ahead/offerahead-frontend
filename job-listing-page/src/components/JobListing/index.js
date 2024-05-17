@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../JobListing.css'; // 确保引入了 CSS 样式文件
+import './JobListing.css'; // 确保引入了 CSS 样式文件
 
 
 

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import JobListing from './JobListing';
-import '../JobList.css'; // 确保有 JobList.css 文件
-import config from '../config';
+import JobListing from '../JobListing';
+import './JobList.css'; // 确保有 JobList.css 文件
+import config from '../../config';
 
 const JobList = () => {
     const [jobs, setJobs] = useState([]);
