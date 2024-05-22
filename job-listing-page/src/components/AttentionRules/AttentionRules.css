@@ -1,80 +1,73 @@
-/* AttentionRules.css */
-
-/* 整个 AttentionRules 组件的容器样式 */
 .attention-rules-container {
-    font-family: Arial, sans-serif; /* 使用常见的无衬线字体 */
-    background-color: #fff; /* 将背景色改为白色 */
-    color: #282c34; /* Twilight 主题的文字颜色 */
+    max-width: 600px;
+    margin: 0 auto;
     padding: 20px;
+    border: 1px solid #ddd;
     border-radius: 10px;
+    background-color: #f9f9f9;
 }
 
-/* 表单样式 */
 .attention-rules-form {
-    margin-bottom: 20px;
-    display: flex; /* 使用 flex 布局 */
-    align-items: center; /* 垂直居中对齐 */
+    display: flex;
+    flex-direction: column;
 }
 
-/* 输入框样式 */
-.attention-rules-form input[type="text"] {
-    flex: 1; /* 自动填充剩余空间 */
+.attention-rules-form input {
+    margin-bottom: 15px;
     padding: 10px;
-    margin-right: 10px; /* 添加右侧间距 */
     border: 1px solid #ccc;
     border-radius: 5px;
+    font-size: 16px;
 }
 
-/* 提交按钮样式 */
 .attention-rules-form .submit-button {
-    padding: 10px 20px; /* 调整按钮的内边距 */
+    padding: 10px 15px;
     border: none;
     border-radius: 5px;
-    background-color: #61dafb; /* React 官方蓝色 */
-    color: #fff;
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
 }
 
 .attention-rules-form .submit-button:hover {
-    background-color: #47a8e8; /* 悬停时的颜色 */
+    background-color: #0056b3;
 }
 
-/* 错误消息样式 */
-.error-message {
-    color: #ff5f5f; /* 错误消息的颜色 */
-    margin-top: 10px;
-}
-
-/* 结果列表样式 */
 .results-container {
     margin-top: 20px;
-    justify-content: center;
-    display: flex;
-
 }
 
-/* 无结果消息样式 */
-.no-results-message {
-    color: #ccc; /* 无结果消息的颜色 */
+.success-message, .error-message {
+    color: green;
+    font-size: 14px;
+    margin-bottom: 10px;
 }
 
 .job-list {
-
-    list-style: none;
+    list-style-type: none;
     padding: 0;
-    column-count: 1; /* 设置列数为1 */
-    column-gap: 20px; /* 列之间的间距，可根据需要调整 */
-    text-align: center; /* 左对齐 */
 }
 
 .job-item {
-    display: flex; /* 列表项使用 flex 布局 */
-    margin-bottom: 10px; /* 可选：添加下边距 */
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
 }
 
-/* 其他样式 */
+.job-item.even {
+    background-color: #f1f1f1;
+}
+
+.job-item.odd {
+    background-color: #fff;
+}
+
 .job-content {
-    flex: 1; /* 让文本内容占据剩余的空间 */
-    text-align: left; /* 文本内容居左 */
+    display: flex;
+    justify-content: space-between;
+}
+
+.no-results-message {
+    font-size: 14px;
+    color: #999;
 }

@@ -1,24 +1,25 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios"; // 请确保安装了 axios
 import config from "../../config";
 import "./AttentionRules.css"; // 导入样式文件
 
 const AttentionRules = () => {
     const [companyName, setCompanyName] = useState("");
+    const [companyUrl, setCompanyUrl] = useState("");
     const [jobTitle, setJobTitle] = useState("");
     const [jobLink, setJobLink] = useState("");
     const [jobList, setJobList] = useState([]);
-    const [cssPath, setCssPath] = useState([]);
+    const [cssPath, setCssPath] = useState([]);//bug?
     const [error, setError] = useState("");
     const [showResults, setShowResults] = useState(false);
-    const [successMessage, setSuccessMessage] = useState(false);
-
+    const [successMessage, setSuccessMessage] = useState("");
 
     const handleSubmit = async (event) => {
         event.preventDefault();
         try {
             const response = await axios.post(`${config.API_MARKET_URL}/api/crawler/rule_check`, {
-                company: companyName,
+                companyName: companyName,
+                companyUrl: companyUrl,
                 jobTitle: jobTitle,
                 careerPageUrl: jobLink,
                 cssPath: cssPath,
@@ -28,7 +29,6 @@ const AttentionRules = () => {
             setError("");
             setShowResults(true); // 显示结果
             setSuccessMessage("Submission successful!"); // 设置成功消息
-
         } catch (error) {
             setJobList([]); // 清空jobList
             setShowResults(false); // 隐藏结果列表
@@ -38,16 +38,20 @@ const AttentionRules = () => {
 
     const handleSaveRule = async () => {
         try {
-            await axios.post(`${config.API_MARKET_URL}/api/crawler/rule`, {
-                company: companyName,
+            console.log({
+                companyName: companyName,
+                companyUrl: companyUrl,
                 jobTitle: jobTitle,
                 careerPageUrl: jobLink,
                 cssPath: cssPath,
             });
-            setCompanyName("");
-            setJobTitle("");
-            setJobLink("");
-            setCssPath("");
+            await axios.post(`${config.API_MARKET_URL}/api/crawler/rule`, {
+                companyName: companyName,
+                companyUrl: companyUrl,
+                jobTitle: jobTitle,
+                careerPageUrl: jobLink,
+                cssPath: cssPath,
+            });
             setShowResults(false);
             setError("");
             setSuccessMessage("Submission successful!"); // 设置成功消息
@@ -58,10 +62,7 @@ const AttentionRules = () => {
 
     useEffect(() => {
         // 在组件挂载时执行一次表单提交
-        handleSubmit({
-            preventDefault: () => {
-            }
-        });
+        handleSubmit({ preventDefault: () => {} });
     }, []); // 空数组表示仅在组件挂载时执行
 
     return (
@@ -73,6 +74,12 @@ const AttentionRules = () => {
                     placeholder="Company Name"
                     value={companyName}
                     onChange={(event) => setCompanyName(event.target.value)}
+                />
+                <input
+                    type="text"
+                    placeholder="Company URL"
+                    value={companyUrl}
+                    onChange={(event) => setCompanyUrl(event.target.value)}
                 />
                 <input
                     type="text"
@@ -88,7 +95,7 @@ const AttentionRules = () => {
                 />
                 <input
                     type="text"
-                    placeholder="Css Path"
+                    placeholder="CSS Path"
                     value={cssPath}
                     onChange={(event) => setCssPath(event.target.value)}
                 />
@@ -115,7 +122,7 @@ const AttentionRules = () => {
                         ) : (
                             <p className="no-results-message">No results found.</p>
                         )}
-                        <button className="submit-button" onClick={handleSaveRule}>Submit Attention Rule</button>
+                        <button type="submit" className="submit-button" onClick={handleSaveRule}>Submit Attention Rule</button>
                     </div>
                 )}
             </div>
